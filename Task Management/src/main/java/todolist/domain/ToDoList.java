@@ -6,7 +6,6 @@ import javax.persistence.*;
 import lombok.Data;
 import todolist.TaskManagementApplication;
 import todolist.domain.TaskAdded;
-import todolist.domain.TaskCompleted;
 
 @Entity
 @Table(name = "ToDoList_table")
@@ -21,13 +20,14 @@ public class ToDoList {
 
     private String priority;
 
+    private String status;
+
+    private String result;
+
     @PostPersist
     public void onPostPersist() {
         TaskAdded taskAdded = new TaskAdded(this);
         taskAdded.publishAfterCommit();
-
-        TaskCompleted taskCompleted = new TaskCompleted(this);
-        taskCompleted.publishAfterCommit();
     }
 
     @PrePersist
@@ -38,6 +38,16 @@ public class ToDoList {
             ToDoListRepository.class
         );
         return toDoListRepository;
+    }
+
+    public void completeTask(CompleteTaskCommand completeTaskCommand) {
+        // implement logic here.
+        // set status to Completed
+        this.setStatus("Completed");
+        this.setResult(completeTaskCommand.getResult());
+
+        TaskCompleted taskCompleted = new TaskCompleted(this);
+        taskCompleted.publishAfterCommit();
     }
 
     public static void sendReminder(TaskAdded taskAdded) {

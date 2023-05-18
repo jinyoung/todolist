@@ -14,6 +14,12 @@
             <div>
                 <String label="Priority" v-model="item.priority" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="Result" v-model="item.result" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

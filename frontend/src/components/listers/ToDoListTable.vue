@@ -69,6 +69,8 @@
                     { text: "title", value: "title" },
                     { text: "deadline", value: "deadline" },
                     { text: "priority", value: "priority" },
+                    { text: "status", value: "status" },
+                    { text: "result", value: "result" },
                 ],
             toDoList : [],
             newValue: {},
@@ -89,6 +91,8 @@
                 'title': '',
                 'deadline': '2023-05-19',
                 'priority': '',
+                'status': '',
+                'result': '',
             }
         },
         methods: {

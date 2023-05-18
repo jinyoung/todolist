@@ -33,7 +33,7 @@ mvn spring-boot:run
 ## Test by API
 - Task Management
 ```
- http :8088/toDoLists Title="Title" Deadline="Deadline" Priority="Priority" 
+ http :8088/toDoLists Title="Title" Deadline="Deadline" Priority="Priority" status="status" result="result" 
 ```
 - User Management
 ```

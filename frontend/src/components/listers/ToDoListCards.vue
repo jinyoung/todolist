@@ -71,6 +71,8 @@
                 'title': '',
                 'deadline': '2023-05-19',
                 'priority': '',
+                'status': '',
+                'result': '',
             }
         },
         methods:{

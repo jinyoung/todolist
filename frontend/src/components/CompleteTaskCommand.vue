@@ -6,7 +6,7 @@
         </v-card-title>
 
         <v-card-text>
-            <String label="Title" v-model="value.title" :editMode="editMode"/>
+            <String label="Result" v-model="value.result" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -42,7 +42,7 @@
             value: {},
         }),
         created() {
-            this.value.title = '';
+            this.value.result = '';
         },
         watch: {
         },

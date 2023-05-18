@@ -12,6 +12,12 @@ public class ToDoListHateoasProcessor
 
     @Override
     public EntityModel<ToDoList> process(EntityModel<ToDoList> model) {
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/complete")
+                .withRel("complete")
+        );
+
         return model;
     }
 }

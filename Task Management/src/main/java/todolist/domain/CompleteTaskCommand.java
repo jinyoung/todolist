@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class CompleteTaskCommand {
 
-    private String title;
+    private String result;
 }
