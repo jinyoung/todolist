@@ -39,7 +39,7 @@ public class TaskManagementApplication {
 
     public static void main(String[] args) throws Exception {
 
-        // polymorphism 이 필요한 (특정할 수 없는 type 의 경우만 _type 이 필요하고 배열은 그냥 입력 가능함)
+        // polymorphism 이 필요한 (특정할 수 없는 type 의 경우만 _type 이 필요하고 그냥 serialize 될 객체의 type information 으로 자동으로 매핑됨 (배열 포함)))
         String json = "{\"value\": {\"_type\": \"todolist.Person\", \"name\": \"person name\", \"age\": 30, \"addresses\": [{\"city\":\"seoul\"},{\"city\": \"yongin\"}]}}";
 
         
