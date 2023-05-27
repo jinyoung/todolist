@@ -9,5 +9,5 @@ import lombok.Data;
 @Data
 public class Root {
   @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "_type")
-  Object value;
+  Person value;
 }
